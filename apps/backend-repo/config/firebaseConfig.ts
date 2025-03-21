@@ -3,10 +3,10 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const serviceAccount = require("../ebuddy-1a6a0-firebase-adminsdk-fbsvc-8e9ee06eee.json");
+const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY || '';
 
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(JSON.parse(serviceAccount)),
 });
 
 export const db = admin.firestore();
