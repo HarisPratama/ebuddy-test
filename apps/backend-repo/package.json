@@ -1,0 +1,27 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "back end",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "ts-node core/app.ts",
+    "build": "tsc",
+    "start": "node dist/core/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.2.0",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
